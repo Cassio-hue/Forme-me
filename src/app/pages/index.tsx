@@ -1,7 +1,9 @@
-export default function Page() {
+import { Header } from '../components/Header'
+
+const HomePage = () => {
     return (
         <div>
-            <h1>Estou no conteúdo da página</h1>
+            <Header />
             <p>
                 Amet nulla sunt ex laboris officia laboris irure excepteur
                 eiusmod officia excepteur. Esse ullamco pariatur veniam anim ut
@@ -13,3 +15,5 @@ export default function Page() {
         </div>
     )
 }
+
+export default HomePage
