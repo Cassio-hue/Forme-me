@@ -49,9 +49,6 @@ const RegisterPage = () => {
         console.log(name)
     }
 
-
-    
-
     return (
         <div className='flex flex-col w-full items-center justify-center h-5/6 gap-20'>
             <Image sizes='260' src={FormeMeLogo} alt="logo" />
