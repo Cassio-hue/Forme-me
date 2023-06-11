@@ -11,7 +11,7 @@ export function Footer() {
     return (
         <footer
             className={clsx(
-                'flex justify-center px-8 bg-footer-bg text-white font-bold h-16 items-center'
+                'flex justify-center px-8 bg-verde text-white font-bold h-16 items-center'
             )}
         >
             <span>
