@@ -1,7 +1,13 @@
+'use client';
+import { Input } from "./components/Input"
 export default function Page() {
+    function printaValorInput(value: string) {
+        console.log(value)
+    }
     return (
         <div>
             <h1>Estou no conteúdo da página</h1>
+            <Input label="Senha" required valueChange={printaValorInput}/>
             <p>
                 Amet nulla sunt ex laboris officia laboris irure excepteur
                 eiusmod officia excepteur. Esse ullamco pariatur veniam anim ut
