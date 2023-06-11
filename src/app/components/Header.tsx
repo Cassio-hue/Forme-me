@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import FalarDevs from '../../../public/converse_devs.svg'
-import FormeMeLogo from '../../../public/formeme_logo.svg'
+import FormeMeLogo from '../../../public/formeme_logo_branca.svg'
 import UserPicture from '../../../public/gus.jpeg'
 import Sair from '../../../public/sair.svg'
 
