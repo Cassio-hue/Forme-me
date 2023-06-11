@@ -8,7 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'header-bg': '#004080'
+        'azul': '#004080',
+        'verde': '#006600'
+      },
+      fontFamily: {
+        alegreya: ['Alegreya'] 
       }
     },
   },

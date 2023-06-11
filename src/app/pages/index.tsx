@@ -1,4 +1,5 @@
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 const HomePage = () => {
     return (
@@ -12,6 +13,7 @@ const HomePage = () => {
                 cillum ipsum officia eiusmod. Minim irure officia in ut
                 excepteur commodo esse duis nulla eu nulla proident qui duis.
             </p>
+            <Footer />
         </div>
     )
 }

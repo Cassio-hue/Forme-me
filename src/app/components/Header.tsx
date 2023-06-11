@@ -10,7 +10,7 @@ export function Header() {
     return (
         <header
             className={clsx(
-                'flex justify-between bg-header-bg text-white h-16 items-center px-8'
+                'flex justify-between bg-azul text-white h-16 items-center px-8'
             )}
         >
             <Image src={FormeMeLogo} alt="logo" />
