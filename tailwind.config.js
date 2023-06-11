@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         'azul': '#004080',
         'verde': '#006600'
+      },
+      fontFamily: {
+        alegreya: ['Alegreya'] 
       }
     },
   },

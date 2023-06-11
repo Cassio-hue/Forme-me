@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+// import clsx from 'clsx'
 // import Image from 'next/image'
 import { FaHeart } from "react-icons/fa"
 
@@ -10,9 +10,7 @@ import { FaHeart } from "react-icons/fa"
 export function Footer() {
     return (
         <footer
-            className={clsx(
-                'flex justify-center px-8 bg-verde text-white font-bold h-16 items-center'
-            )}
+            className='flex justify-center px-8 bg-verde font-alegreya text-white text-md font-bold h-16 items-center'
         >
             <span>
                 DESENVOLVIDO COM
