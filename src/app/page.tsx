@@ -1,4 +1,8 @@
+'use client';
 export default function Page() {
+    function printaValorInput(value: string) {
+        console.log(value)
+    }
     return (
         <div>
             <h1>Estou no conteúdo da página</h1>
