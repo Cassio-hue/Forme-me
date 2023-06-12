@@ -14,7 +14,7 @@ type TextFieldProps = {
 
 export function Input(props: TextFieldProps) {
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col">
             <label htmlFor="outlined-basic" className="font-bold">
                 {props.label} {props.required ? '*' : ''}
             </label>
