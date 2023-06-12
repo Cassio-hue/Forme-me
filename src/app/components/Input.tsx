@@ -19,7 +19,7 @@ export function Input(props: TextFieldProps) {
                 {props.label} {props.required ? '*' : ''}
             </label>
             <TextField
-                id="outlined-basic" 
+                id={`outlined-basic ${props.label}`}
                 error={props.error} 
                 onChange = {e => props.valueChange(e.target.value)} 
                 label="" variant="outlined" 
