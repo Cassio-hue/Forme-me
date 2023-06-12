@@ -13,7 +13,7 @@ const RegisterPage = () => {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
-
+    
     function changePassword(value: string){
         if(value.length < 8){
             setErrorPassword(true);
