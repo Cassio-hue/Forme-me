@@ -1,4 +1,7 @@
-'use client';
+'use client'
+
+import { CardProfessor } from './components/CardProfessor'
+
 export default function Page() {
     function printaValorInput(value: string) {
         console.log(value)
@@ -14,6 +17,16 @@ export default function Page() {
                 cillum ipsum officia eiusmod. Minim irure officia in ut
                 excepteur commodo esse duis nulla eu nulla proident qui duis.
             </p>
+
+            <p></p>
+
+            <CardProfessor
+                name={''}
+                disciplines={['Droga um', 'droga dois']}
+                area_of_interest={[]}
+                area_of_ocupation={[]}
+                image={'https://loremflickr.com/640/480'}
+            />
         </div>
     )
 }
