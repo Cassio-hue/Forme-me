@@ -1,10 +1,13 @@
 'use client';
-import {Botao} from './components/Button';
+import {FormButton} from './components/Button';
+
+import { CardProfessor } from './components/CardProfessor'
+
 export default function Page() {
     return (
         <div>
             <h1>Estou no conteúdo da página</h1>
-            <Botao text="CADASTRAR" />
+            <FormButton text="CADASTRAR" />
             <p>
                 Amet nulla sunt ex laboris officia laboris irure excepteur
                 eiusmod officia excepteur. Esse ullamco pariatur veniam anim ut
@@ -13,6 +16,16 @@ export default function Page() {
                 cillum ipsum officia eiusmod. Minim irure officia in ut
                 excepteur commodo esse duis nulla eu nulla proident qui duis.
             </p>
+
+            <p></p>
+
+            <CardProfessor
+                name={''}
+                disciplines={['Droga um', 'droga dois']}
+                area_of_interest={[]}
+                area_of_ocupation={[]}
+                image={'https://loremflickr.com/640/480'}
+            />
         </div>
     )
 }
