@@ -25,7 +25,7 @@ const RegisterPage = () => {
     }
 
     function changeConfirm(value: string){
-        if(value === password) {
+        if(value !== password) {
             setErrorConfirm(true);
         } else {
             setErrorConfirm(false);
