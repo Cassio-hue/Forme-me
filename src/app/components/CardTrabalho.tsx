@@ -1,21 +1,19 @@
 import { Box } from '@mui/material'
 
-import { Photo } from './Photo'
-
 type CardProfessorProps = {
-    name: string
-    disciplines: string[]
-    area_of_interest: string[]
-    area_of_ocupation: string[]
-    image: string
+    title: string
+    names: string[]
+    orientadores: string[]
+    coorientadores: string[]
+    related_fields: string[]
 }
 
-export function CardProfessor({
-    name,
-    disciplines,
-    area_of_interest,
-    area_of_ocupation,
-    image,
+export function CardTrabalho({
+    title,
+    names,
+    orientadores,
+    coorientadores,
+    related_fields,
 }: CardProfessorProps) {
     return (
         <div>
@@ -35,29 +33,21 @@ export function CardProfessor({
             >
                 <div className="flex justify-center px-9">
                     <div className="flex-col">
-                        <div className="flex justify-center">
-                            <Photo
-                                alt="Foto do Professor"
-                                height={146}
-                                width={166}
-                                src={image}
-                            />
-                        </div>
-                        <div className="pt-2 text-2xl flex justify-center">
-                            <p className="mb-4 font-basic">{name}</p>
+                        <div className="pt-10 text-2xl flex justify-center text-center">
+                            <p className="mb-4 font-basic">{title}</p>
                         </div>
                         <div className="pt-4 text-sm">
                             <p className="mb-7 font-basic">
-                                Disciplinas ministradas:{' '}
-                                {disciplines.join(', ')}.
+                                Autor(es): {names.join(', ')}.
                             </p>
                             <p className="mb-7 font-basic">
-                                Áreas de interesse:{' '}
-                                {area_of_interest.join(', ')}.
+                                Orientador(es): {orientadores.join(', ')}.
                             </p>
                             <p className="mb-7 font-basic">
-                                Áreas de interesse:{' '}
-                                {area_of_ocupation.join(', ')}.
+                                Coorientador: {coorientadores.join(', ')}.
+                            </p>
+                            <p className="mb-7 font-basic">
+                                Área relacionada: {related_fields.join(', ')}.
                             </p>
                         </div>
                     </div>
