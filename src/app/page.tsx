@@ -1,8 +1,6 @@
 'use client';
 import {FormButton} from './components/Button';
 
-import { CardProfessor } from './components/CardProfessor'
-
 export default function Page() {
     return (
         <div>
