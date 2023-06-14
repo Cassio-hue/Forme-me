@@ -4,7 +4,6 @@ import FormemeLogo from '@/../public/login_logo.svg'
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { FormButton } from '../components/Button'
 import { Input } from '../components/Input'
 import { FormButton } from '../components/Button'
 
