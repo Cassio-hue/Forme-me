@@ -18,14 +18,6 @@ export default function Page() {
             </p>
 
             <p></p>
-
-            <CardProfessor
-                name={''}
-                disciplines={['Droga um', 'droga dois']}
-                area_of_interest={[]}
-                area_of_ocupation={[]}
-                image={'https://loremflickr.com/640/480'}
-            />
         </div>
     )
 }
