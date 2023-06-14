@@ -1,4 +1,4 @@
-'use client';
+'use client'
 export default function Page() {
     function printaValorInput(value: string) {
         console.log(value)
