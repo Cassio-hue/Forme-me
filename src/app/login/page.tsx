@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 import { FormButton } from '../components/Button'
 import { Input } from '../components/Input'
+import { FormButton } from '../components/Button'
 
 export default function LoginPage() {
     const [password, setPassword] = useState('')
