@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 import { Input } from '../components/Input'
+import { FormButton } from '../components/Button'
 
 export default function LoginPage() {
     const [password, setPassword] = useState('')
@@ -66,16 +67,16 @@ export default function LoginPage() {
 
                             <div className="flex flex-col pt-5">
                                 <span className="text-xs">
-                                    Não possui conta,{' '}
+                                    Não possui conta?{' '}
                                     <span className="text-xs text-verde font-bold">
-                                        cadastre-se
+                                        Cadastre-se
                                     </span>
                                 </span>
-                                <span className="text-xs text-verde font-bold">
+                                <span className="text-xs text-verde font-bold mt-3">
                                     Esqueci a senha
                                 </span>
 
-                                <button>Entrar</button>
+                                <FormButton>Entrar</FormButton>
                             </div>
                         </div>
                     </div>

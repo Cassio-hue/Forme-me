@@ -18,7 +18,7 @@ export function Input(props: TextFieldProps) {
             <label htmlFor="outlined-basic" className="font-bold">
                 {props.label} {props.required ? '*' : ''}
             </label>
-            <TextField
+            <TextField InputProps = {{style: {borderRadius: 15}}}
                 id="outlined-basic" 
                 error={props.error} 
                 onChange = {e => props.valueChange(e.target.value)} 

@@ -1,23 +1,8 @@
-import Button from '@mui/material/Button';
+import { Button } from '@mui/material'
+import clsx from 'clsx'
 
-type ButtonPropsCustom = {
-    startIcon?: string;
-    text: string;
-    bgColor?: string;
-    textColor?: string;
-
-}
-
-export function Botao(propsCustom: ButtonPropsCustom) {
-    const styles = {
-        background: `${propsCustom.bgColor ? propsCustom.bgColor : '#004080'}`,
-        color: `${propsCustom.textColor ? propsCustom.textColor : 'ffffff'}`,
-        borderRadius: '8px'
-    }
-    
+export const FormButton = ( {children}:any ) => {
     return (
-        <Button variant="contained" className="w-full" style={styles} startIcon={propsCustom.startIcon}>
-            {propsCustom.text}
-        </Button>
+        <Button className={clsx("bg-azul hover:bg-azul hover:backdrop: text-white rounded-lg normal-case p-3 shadow-lg shadow-slate-600 mt-3")}>{children}</Button>
     )
 }
