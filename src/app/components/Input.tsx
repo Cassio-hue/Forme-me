@@ -20,6 +20,7 @@ export function Input(props: TextFieldProps) {
             </label>
             <TextField
                 id={`outlined-basic ${props.label}`}
+                InputProps = {{style: {borderRadius: 15}}}
                 error={props.error} 
                 onChange = {e => props.valueChange(e.target.value)} 
                 label="" variant="outlined" 
