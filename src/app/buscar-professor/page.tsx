@@ -7,12 +7,17 @@ import { useState } from 'react'
 
 import { FormButton } from '../components/Button'
 import { Input } from '../components/Input'
+import InputAutocomplete from '../components/InputAutocomplete'
 import { ModalDialog } from '../components/Modal'
+
+const departamentos = [{ label: 'Departamento 1', id: 1 }]
+const disciplinas = [{ label: 'Disciplina 1', id: 1 }]
+const areasInteresse = [{ label: 'Área de interesse 1', id: 1 }]
 
 function ModalProcurarProfessor() {
     const [nomeProfessor, setNomeProfessor] = useState('')
     return (
-        <div className="">
+        <div className="bg-[#D6D6D6]">
             <div className="flex justify-between items-center p-5">
                 <span className="pr-5">Professor</span>
                 <Input
@@ -22,23 +27,23 @@ function ModalProcurarProfessor() {
             </div>
             <div className="flex justify-between items-center p-5">
                 <span className="pr-5">Departamento</span>
-                <Input
-                    placeholder="Digite o nome do professor"
-                    valueChange={setNomeProfessor}
+                <InputAutocomplete
+                    placeholder="Selecione departamento"
+                    options={departamentos}
                 />
             </div>
             <div className="flex justify-between items-center p-5">
                 <span className="pr-5">Disciplina</span>
-                <Input
-                    placeholder="Digite o nome do professor"
-                    valueChange={setNomeProfessor}
+                <InputAutocomplete
+                    placeholder="Selecione disciplina"
+                    options={disciplinas}
                 />
             </div>
             <div className="flex justify-between items-center p-5">
                 <span className="pr-5">Área de interesse</span>
-                <Input
-                    placeholder="Digite o nome do professor"
-                    valueChange={setNomeProfessor}
+                <InputAutocomplete
+                    placeholder="Selecione área de interesse"
+                    options={areasInteresse}
                 />
             </div>
 
