@@ -24,7 +24,12 @@ export function Header() {
                     <li>
                         <Link href="/">Buscar Projetos</Link>
                     </li>
-                    <Image src={FalarDevs} alt="falar-com-desenvolvedores" />
+                    <Link href="/suporte">
+                        <Image
+                            src={FalarDevs}
+                            alt="falar-com-desenvolvedores"
+                        />
+                    </Link>
                 </ul>
             </nav>
             <div className="flex items-center">
