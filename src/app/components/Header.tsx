@@ -1,6 +1,8 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 
+// Importe o Link do Next.js
 import FalarDevs from '../../../public/converse_devs.svg'
 import FormeMeLogo from '../../../public/formeme_logo.svg'
 import UserPicture from '../../../public/gus.jpeg'
@@ -16,8 +18,12 @@ export function Header() {
             <Image src={FormeMeLogo} alt="logo" />
             <nav className="w-1/3">
                 <ul className="flex justify-between items-center">
-                    <li>Buscar Professor</li>
-                    <li>Buscar Projetos</li>
+                    <li>
+                        <Link href="/">Buscar Professor</Link>
+                    </li>
+                    <li>
+                        <Link href="/">Buscar Projetos</Link>
+                    </li>
                     <Image src={FalarDevs} alt="falar-com-desenvolvedores" />
                 </ul>
             </nav>
