@@ -15,7 +15,6 @@
         "@typescript-eslint/comma-dangle": "off",
         "simple-import-sort/exports": "error",
         "semi": ["error", "never"],
-        "arrow-parens": ["error", "as-needed"],
         "no-else-return": "error",
         "curly": ["error", "multi", "consistent"],
         "linebreak-style": ["error", "unix"],
