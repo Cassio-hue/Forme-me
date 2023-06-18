@@ -2,12 +2,12 @@ import TextField from '@mui/material/TextField'
 
 type TextFieldProps = {
     required?: boolean
-    label: string
+    label?: string
     valueChange: Function
     disabled?: boolean
-    type: string
-    placeholder: string
-    error: boolean
+    type?: string
+    placeholder?: string
+    error?: boolean
     helperText?: string
     errorMessage?: string
 }

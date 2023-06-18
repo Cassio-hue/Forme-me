@@ -11,13 +11,11 @@ export const ModalDialog = ({ children, open, handleClose }: Props) => {
     return (
         <Dialog
             hideBackdrop
-            className="bg-gradient-r"
+            className="bg-cinza-transparente"
             open={open}
             onClose={handleClose}
         >
-            <div className="w-full h-full flex justify-center items-center">
-                {children}
-            </div>
+            <div className="p-12 w-full h-full bg-[#D6D6D6]">{children}</div>
         </Dialog>
     )
 }

@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'azul': '#004080',
-        'verde': '#006600'
+        'verde': '#006600',
+        'cinza-transparente': 'rgba(218, 216, 217, 0.41)'
       },
       fontFamily: {
         alegreya: ['Alegreya'] 
