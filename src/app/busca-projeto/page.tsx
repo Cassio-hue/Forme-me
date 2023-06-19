@@ -1,42 +1,42 @@
-'use client';
-import {FormButton} from './components/Button';
+'use client'
 
 import FormemeLogo from '@/../public/login_logo.svg'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { Input } from './components/Input'
-import InputAutocomplete from './components/InputAutocomplete'
-import { ModalDialog } from './components/Modal'
+import { FormButton } from '../components/Button'
+import { Input } from '../components/Input'
+import InputAutocomplete from '../components/InputAutocomplete'
+import { ModalDialog } from '../components/Modal'
 
-const departamentos = [{ label: 'Departamento 1', id: 1 }]
-const disciplinas = [{ label: 'Disciplina 1', id: 1 }]
 const areasInteresse = [{ label: 'Área de interesse 1', id: 1 }]
 
-function ModalProcurarProfessor() {
-    const [nomeProfessor, setNomeProfessor] = useState('')
+function ModalBuscarProjeto() {
+    const [nomeAutor, setNomeAutor] = useState('')
+    const [nomeOrientador, setNomeOrientador] = useState('')
+    const [nomeCoorientador, setNomeCoorientador] = useState('')
     return (
         <div className="bg-[#D6D6D6]">
             <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Professor</span>
+                <span className="pr-5">Autor</span>
                 <Input
-                    placeholder="Digite o nome do professor"
-                    valueChange={setNomeProfessor}
+                    placeholder="Digite o nome do autor"
+                    valueChange={setNomeAutor}
                 />
             </div>
             <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Departamento</span>
-                <InputAutocomplete
-                    placeholder="Selecione departamento"
-                    options={departamentos}
+                <span className="pr-5">Orientador</span>
+                <Input
+                    placeholder="Digite o nome do orientador"
+                    valueChange={setNomeOrientador}
                 />
             </div>
             <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Disciplina</span>
-                <InputAutocomplete
-                    placeholder="Selecione disciplina"
-                    options={disciplinas}
+                <span className="pr-5">Coorientador</span>
+                <Input
+                    placeholder="Digite o nome do coorientador"
+                    valueChange={setNomeCoorientador}
                 />
             </div>
             <div className="flex justify-between items-center p-5">
@@ -52,8 +52,8 @@ function ModalProcurarProfessor() {
     )
 }
 
-export default function BuscarProfessor() {
-    const [nomeProfessor, setNomeProfessor] = useState('')
+export default function BuscarProjeto() {
+    const [nomeAutor, setNomeAutor] = useState('')
     const [open, setOpen] = useState(false)
     console.log(open)
     function handleOpen() {
@@ -72,7 +72,7 @@ export default function BuscarProfessor() {
                     width={300}
                 />
                 <div className="flex flex-col mt-20">
-                    <h1 className="text-2xl mb-4">Buscando Professor?...</h1>
+                    <h1 className="text-2xl mb-4">Buscando Projetos?...</h1>
                     <span
                         className={clsx(
                             'bg-[#D9D9D9] w-full p-4 shadow-lg shadow-slate-600 rounded-md cursor-pointer'
@@ -84,7 +84,7 @@ export default function BuscarProfessor() {
                         Selecione as opções
                     </span>
                     <ModalDialog open={open} handleClose={handleClose}>
-                        <ModalProcurarProfessor />
+                        <ModalBuscarProjeto />
                     </ModalDialog>
                 </div>
             </div>
