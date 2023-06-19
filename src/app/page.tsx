@@ -1,11 +1,10 @@
 'use client';
+import {Botao} from './components/Button';
 export default function Page() {
-    function printaValorInput(value: string) {
-        console.log(value)
-    }
     return (
         <div>
             <h1>Estou no conteúdo da página</h1>
+            <Botao text="CADASTRAR" />
             <p>
                 Amet nulla sunt ex laboris officia laboris irure excepteur
                 eiusmod officia excepteur. Esse ullamco pariatur veniam anim ut
