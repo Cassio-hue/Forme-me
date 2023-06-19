@@ -22,7 +22,7 @@ export function Header() {
                         <Link href="/">Buscar Professor</Link>
                     </li>
                     <li>
-                        <Link href="/">Buscar Projetos</Link>
+                        <Link href="/busca-projeto">Buscar Projetos</Link>
                     </li>
                     <Link href="/suporte">
                         <Image
