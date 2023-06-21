@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import FormeMeLogo from '../../../public/formeme_logo_azul.svg'
 import { Input } from '../components/Input';
+import { FormButton } from '../components/Button';
 
 const RegisterPage = () => {
     const [errorPassword, setErrorPassword] = useState(false);
@@ -90,13 +91,19 @@ const RegisterPage = () => {
                         required 
                         type="password"
                         valueChange={changeConfirm}
-                        placeholder='Digite a mesma sequência anterior' 
+                        placeholder='Confirme sua senha' 
                         helperText='Deve corresponder com a senha'
                         errorMessage="Correspondência incorreta"
                         error={errorConfirm}
                     />
                 </div>
-                
+                <div className='w-full flex justify-end'>
+                    <div className='w-1/4'>
+                        <FormButton>
+                            Cadastrar
+                        </FormButton>
+                    </div>
+                </div>
             </form>
             
         </div>
