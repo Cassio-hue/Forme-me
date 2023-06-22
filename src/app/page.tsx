@@ -1,91 +1,85 @@
 'use client'
 
 import FormemeLogo from '@/../public/login_logo.svg'
-import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
 
 import { FormButton } from './components/Button'
 import { Input } from './components/Input'
-import InputAutocomplete from './components/InputAutocomplete'
-import { ModalDialog } from './components/Modal'
 
-const departamentos = [{ label: 'Departamento 1', id: 1 }]
-const disciplinas = [{ label: 'Disciplina 1', id: 1 }]
-const areasInteresse = [{ label: 'Área de interesse 1', id: 1 }]
+export default function LoginPage() {
+    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('')
+    const [errorConfirm, setErrorConfirm] = useState(false)
+    const [errorPassword, setErrorPassword] = useState(false)
+    const [errorEmail, setErrorEmail] = useState(false)
 
-function ModalProcurarProfessor() {
-    const [nomeProfessor, setNomeProfessor] = useState('')
-    return (
-        <div className="bg-[#D6D6D6]">
-            <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Professor</span>
-                <Input
-                    placeholder="Digite o nome do professor"
-                    valueChange={setNomeProfessor}
-                />
-            </div>
-            <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Departamento</span>
-                <InputAutocomplete
-                    placeholder="Selecione departamento"
-                    options={departamentos}
-                />
-            </div>
-            <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Disciplina</span>
-                <InputAutocomplete
-                    placeholder="Selecione disciplina"
-                    options={disciplinas}
-                />
-            </div>
-            <div className="flex justify-between items-center p-5">
-                <span className="pr-5">Área de interesse</span>
-                <InputAutocomplete
-                    placeholder="Selecione área de interesse"
-                    options={areasInteresse}
-                />
-            </div>
-
-            <FormButton>Procurar</FormButton>
-        </div>
-    )
-}
-
-export default function BuscarProfessor() {
-    const [nomeProfessor, setNomeProfessor] = useState('')
-    const [open, setOpen] = useState(false)
-    console.log(open)
-    function handleOpen() {
-        setOpen(true)
+    function changePassword(value: string) {
+        if (value.length < 8) {
+            setErrorPassword(true)
+        } else {
+            setErrorPassword(false)
+            setPassword(value)
+        }
     }
-    function handleClose() {
-        setOpen(false)
+
+    function changeEmail(value: string) {
+        const regexp = new RegExp(
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+        const isEmail = regexp.test(value)
+        setErrorEmail(!isEmail)
+        if (isEmail) setEmail(value)
     }
+
     return (
-        <div className="flex justify-center h-full w-full">
-            <div className="flex h-full flex-col">
+        <div className="flex relative justify-center items-center h-full">
+            <div className="flex flex-col h-full justify-center items-center pb-16">
                 <Image
                     className="p-8"
                     src={FormemeLogo}
                     alt="logo"
-                    width={300}
+                    width={200}
                 />
-                <div className="flex flex-col mt-20">
-                    <h1 className="text-2xl mb-4">Buscando Professor?...</h1>
-                    <span
-                        className={clsx(
-                            'bg-[#D9D9D9] w-full p-4 shadow-lg shadow-slate-600 rounded-md cursor-pointer'
-                        )}
-                        onClick={() => {
-                            handleOpen()
-                        }}
-                    >
-                        Selecione as opções
-                    </span>
-                    <ModalDialog open={open} handleClose={handleClose}>
-                        <ModalProcurarProfessor />
-                    </ModalDialog>
+                <div className="grid grid-col-1 items-center">
+                    <div className="flex gap-12">
+                        <Input
+                            label="E-mail"
+                            required
+                            type="email"
+                            valueChange={changeEmail}
+                            placeholder="Digite um email"
+                            helperText="Digite um email válido"
+                            errorMessage="E-mail está incorreto"
+                            error={errorEmail}
+                        />
+                        <div>
+                            <Input
+                                label="Senha"
+                                required
+                                type="password"
+                                valueChange={changePassword}
+                                placeholder="Digite uma senha"
+                                helperText="Digite uma senha de 8 caracteres"
+                                errorMessage="Padrão de senha incorreto"
+                                error={errorPassword}
+                            />
+
+                            <div className="flex flex-col pt-5">
+                                <span className="text-xs">
+                                    Não possui conta?{' '}
+                                    <span className="text-xs text-verde font-bold">
+                                        Cadastre-se
+                                    </span>
+                                </span>
+                                <span className="text-xs text-verde font-bold mt-3">
+                                    Esqueci a senha
+                                </span>
+
+                                <FormButton>Entrar</FormButton>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
