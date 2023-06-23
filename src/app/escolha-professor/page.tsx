@@ -1,5 +1,7 @@
 'use client'
 
+import React from 'react'
+
 import { CardProfessor } from '../components/CardProfessor'
 import { CardTrabalho } from '../components/CardTrabalho'
 

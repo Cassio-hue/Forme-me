@@ -15,8 +15,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
+            <head>
+                <link rel="icon" href="/favicon.ico" />
+            </head>
             <body className="flex flex-col h-screen">
                 <Header />
+
                 {children}
                 <Footer />
             </body>

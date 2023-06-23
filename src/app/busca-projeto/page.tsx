@@ -4,6 +4,7 @@ import FormemeLogo from '@/../public/login_logo.svg'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
+import React from 'react'
 
 import { FormButton } from '../components/Button'
 import { Input } from '../components/Input'
@@ -16,6 +17,9 @@ function ModalBuscarProjeto() {
     const [nomeAutor, setNomeAutor] = useState('')
     const [nomeOrientador, setNomeOrientador] = useState('')
     const [nomeCoorientador, setNomeCoorientador] = useState('')
+    const [areaInteresse, setAreaInteresse] = React.useState<
+        typeof Option | string | undefined
+    >('')
     return (
         <div className="bg-[#D6D6D6]">
             <div className="flex justify-between items-center p-5">
@@ -44,6 +48,7 @@ function ModalBuscarProjeto() {
                 <InputAutocomplete
                     placeholder="Selecione área de interesse"
                     options={areasInteresse}
+                    valueChange={setAreaInteresse}
                 />
             </div>
 

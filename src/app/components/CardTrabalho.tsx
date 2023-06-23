@@ -18,10 +18,10 @@ export function CardTrabalho({
     return (
         <div>
             <Box
-                className="pt-6"
+                className="pt-2"
                 sx={{
-                    width: 330,
-                    height: 440,
+                    width: 270,
+                    height: 380,
                     borderRadius: 8,
                     backgroundColor: '#F1F0F0',
                     '&:hover': {
@@ -31,22 +31,22 @@ export function CardTrabalho({
                     },
                 }}
             >
-                <div className="flex justify-center px-9">
+                <div className="flex justify-center px-5">
                     <div className="flex-col">
-                        <div className="pt-10 text-2xl flex justify-center text-center">
+                        <div className="pt-4 text-xl flex justify-center text-center">
                             <p className="mb-4 font-basic">{title}</p>
                         </div>
                         <div className="pt-4 text-sm">
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Autor(es): {names.join(', ')}.
                             </p>
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Orientador(es): {orientadores.join(', ')}.
                             </p>
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Coorientador: {coorientadores.join(', ')}.
                             </p>
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Área relacionada: {related_fields.join(', ')}.
                             </p>
                         </div>

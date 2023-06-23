@@ -20,10 +20,10 @@ export function CardProfessor({
     return (
         <div>
             <Box
-                className="pt-6"
+                className="pt-2"
                 sx={{
-                    width: 330,
-                    height: 440,
+                    width: 270,
+                    height: 380,
                     borderRadius: 8,
                     backgroundColor: '#F1F0F0',
                     '&:hover': {
@@ -33,29 +33,29 @@ export function CardProfessor({
                     },
                 }}
             >
-                <div className="flex justify-center px-9">
+                <div className="flex justify-center px-5">
                     <div className="flex-col">
                         <div className="flex justify-center">
                             <Photo
                                 alt="Foto do Professor"
-                                height={146}
-                                width={166}
+                                height={100}
+                                width={100}
                                 src={image}
                             />
                         </div>
-                        <div className="pt-2 text-2xl flex justify-center">
-                            <p className="mb-4 font-basic">{name}</p>
+                        <div className="pt-2 text-xl flex justify-center">
+                            <p className="mb-2 font-basic">{name}</p>
                         </div>
-                        <div className="pt-4 text-sm">
-                            <p className="mb-7 font-basic">
+                        <div className="pt-2 text-sm">
+                            <p className="mb-5 font-basic">
                                 Disciplinas ministradas:{' '}
                                 {disciplines.join(', ')}.
                             </p>
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Áreas de interesse:{' '}
                                 {area_of_interest.join(', ')}.
                             </p>
-                            <p className="mb-7 font-basic">
+                            <p className="mb-5 font-basic">
                                 Áreas de interesse:{' '}
                                 {area_of_ocupation.join(', ')}.
                             </p>
