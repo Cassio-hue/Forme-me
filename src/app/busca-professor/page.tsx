@@ -16,9 +16,6 @@ const departamentos = [{ label: 'Departamento', id: 1 }]
 const disciplinas = [{ label: 'Disciplina', id: 1 }]
 const areasInteresse = [{ label: 'Área de interesse', id: 1 }]
 
-// POR ALGUM MOTIVO RETORNA UNDEFINED QUANDO DESELECIONA E VC VE PELO CONSOLE
-// CHECAR SE É UNDEFINED DEPOIS, SE POSSIVEL RESOLVER KKKK
-
 function ModalProcurarProfessor({
     open,
     onClose,
@@ -27,15 +24,12 @@ function ModalProcurarProfessor({
     onClose: Function
 }) {
     const [nomeProfessor, setNomeProfessor] = useState('')
-    //const [value, setValue] = React.useState<string | null>(options[0]);
-    const [departamento, setDepartamento] = React.useState<
-        typeof Option | string | undefined
-    >('')
-    const [disciplina, setDisciplina] = React.useState<
-        typeof Option | string | undefined
-    >('')
+    const [departamento, setDepartamento] = React.useState<string | undefined>(
+        ''
+    )
+    const [disciplina, setDisciplina] = React.useState<string | undefined>('')
     const [areaInteresse, setAreaInteresse] = React.useState<
-        typeof Option | string | undefined
+        string | undefined
     >('')
 
     return (
@@ -71,7 +65,17 @@ function ModalProcurarProfessor({
                     valueChange={setAreaInteresse}
                 />
             </div>
-            <Link href={'/escolha-professor'}>
+            <Link
+                href={{
+                    pathname: '/escolha-professor',
+                    query: {
+                        nomeProfessor: nomeProfessor,
+                        departamento: departamento,
+                        disciplina: disciplina,
+                        areaInteresse: areaInteresse,
+                    },
+                }}
+            >
                 <FormButton
                     disabled={
                         !(
@@ -81,12 +85,6 @@ function ModalProcurarProfessor({
                             (areaInteresse ?? '') !== ''
                         )
                     }
-                    onClick={() => {
-                        console.log('Nome do Professor:', nomeProfessor)
-                        console.log('Disciplina:', disciplina)
-                        console.log('Departamento:', departamento)
-                        console.log('Área de interesse:', areaInteresse)
-                    }}
                 >
                     Procurar
                 </FormButton>
@@ -94,11 +92,7 @@ function ModalProcurarProfessor({
         </div>
     )
 }
-/* <div>{`value: ${disciplina !== null ? `'${disciplina}'` : 'null'}`}</div>
-          <div>{`value: ${nomeProfessor !== null ? `'${nomeProfessor}'` : 'null'}`}</div>
-          <div>{`value: ${departamento !== null ? `'${departamento}'` : 'null'}`}</div>
-          <div>{`value: ${areaInteresse !== null ? `'${areaInteresse}'` : 'null'}`}</div>
-           */
+
 export default function BuscarProfessor() {
     const [nomeProfessor, setNomeProfessor] = useState('')
     const [open, setOpen] = useState(false)

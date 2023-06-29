@@ -4,8 +4,17 @@ import React from 'react'
 
 import { CardProfessor } from '../components/CardProfessor'
 import { CardTrabalho } from '../components/CardTrabalho'
+import { useSearchParams } from 'next/navigation'
+import { teachers } from '../components/data'
 
-export default function Page() {
+export default function Page( ) {
+    const searchParams = useSearchParams()
+    console.log(searchParams.get('nomeProfessor'))
+
+    console.log(teachers)
+
+    
+
     return (
         <div className="flex-grow overflow-y-auto">
             <CardTrabalho
