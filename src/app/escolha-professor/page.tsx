@@ -29,13 +29,17 @@ export default function Page() {
             setProfessores(
                 professores.filter((professor) =>
                     professor.departamento.includes(departamento)
-                ))
-                if (professores.length != 0) {
-                    setProfessores(
-                        professores.filter((professor) =>
-                            professor.sigla_depto.includes(departamento.toUpperCase())
-                        ))
-                    }
+                )
+            )
+            if (professores.length != 0) {
+                setProfessores(
+                    professores.filter((professor) =>
+                        professor.sigla_depto.includes(
+                            departamento.toUpperCase()
+                        )
+                    )
+                )
+            }
         } else if (disciplina) {
             setProfessores(
                 professores.filter((professor) =>
@@ -48,16 +52,14 @@ export default function Page() {
                     professor.areasInteresse.includes(areaInteresse)
                 )
             )
-        } 
-            else {
-                setProfessores(teachers)
-            }
+        } else {
+            setProfessores(teachers)
+        }
     }, [nomeProfessor, departamento, disciplina, areaInteresse])
 
     return (
         <div className="flex flex-wrap gap-5 overflow-y-auto">
-        {
-            professores.map((professor) => (
+            {professores.map((professor) => (
                 <CardProfessor
                     name={professor.nome}
                     disciplines={professor.disciplina}
@@ -65,9 +67,7 @@ export default function Page() {
                     area_of_ocupation={[' ']}
                     image={'https://loremflickr.com/640/480'}
                 />
-            ))
-        }
+            ))}
         </div>
-        
     )
 }
