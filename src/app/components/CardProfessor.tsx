@@ -1,5 +1,4 @@
 import { Box } from '@mui/material'
-
 import { Photo } from './Photo'
 
 type CardProfessorProps = {
@@ -54,10 +53,6 @@ export function CardProfessor({
                             <p className="mb-5 font-basic">
                                 Áreas de interesse:{' '}
                                 {area_of_interest.join(', ')}.
-                            </p>
-                            <p className="mb-5 font-basic">
-                                Áreas de interesse:{' '}
-                                {area_of_ocupation.join(', ')}.
                             </p>
                         </div>
                     </div>
