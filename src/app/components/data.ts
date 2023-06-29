@@ -22,8 +22,8 @@ export const teachers = [
         areasInteresse: ['Computação Paralela', 'Sistemas Distribuídos'],
         link_lattes: 'http://lattes.cnpq.br/1566076687226024',
         email: 'aleteia@unb.br',
-        departamento: 'Ciência da Computação',
-        sigla_depto: 'CIC',
+        departamento: 'Matemática',
+        sigla_depto: 'MAT',
         disciplina: ['Introdução à Cloud Computing', 'Sistemas Operacionais'],
     },
     {
