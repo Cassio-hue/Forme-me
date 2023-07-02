@@ -56,7 +56,7 @@ export default function Page() {
     }, [nomeProfessor, departamento, disciplina, areaInteresse, professores])
 
     return (
-        <div className="flex flex-wrap gap-5 overflow-y-auto">
+        <div className="p-24 flex flex-wrap gap-5 overflow-y-auto">
             {professores.map((professor, idx) => (
                 <CardProfessor
                     key={idx}
