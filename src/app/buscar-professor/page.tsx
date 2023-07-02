@@ -7,18 +7,44 @@ import Link from 'next/link'
 import { useState } from 'react'
 import * as React from 'react'
 
+import { teachers } from '../../utils/data'
 import { FormButton } from '../components/Button'
 import { Input } from '../components/Input'
 import InputAutocomplete from '../components/InputAutocomplete'
 import { ModalDialog } from '../components/Modal'
 
 const departamentos = [
-    { label: 'Departamento', id: 1 },
-    { label: 'CIC', id: 2 },
-    { label: 'MAT', id: 3 },
+    { label: 'CIC', id: 1 },
+    { label: 'MAT', id: 2 },
 ]
-const disciplinas = [{ label: 'Disciplina', id: 1 }]
-const areasInteresse = [{ label: 'Área de interesse', id: 1 }]
+
+const disciplinas: { label: string; id: number }[] = teachers.flatMap(
+    (teacher, index) =>
+        teacher.disciplina.map((disciplina, id) => ({
+            label: disciplina,
+            id: id + 1 + index * teacher.disciplina.length,
+        }))
+)
+
+const disciplinasUnicas = disciplinas.filter(
+    (disciplina, index) =>
+        disciplinas.findIndex((d) => d.label === disciplina.label) === index
+)
+
+const areasInteresse: string[] = teachers.flatMap(
+    (teacher) => teacher.areasInteresse
+)
+
+const areasInteresseUnicas: { label: string; id: number }[] = []
+const areasProcessadas: { [area: string]: number } = {}
+
+areasInteresse.forEach((area) => {
+    if (!areasProcessadas.hasOwnProperty(area)) {
+        const id = Object.keys(areasProcessadas).length + 1
+        areasProcessadas[area] = id
+        areasInteresseUnicas.push({ label: area, id })
+    }
+})
 
 function ModalProcurarProfessor({
     open,
@@ -57,7 +83,7 @@ function ModalProcurarProfessor({
                 <span className="pr-5">Disciplina</span>
                 <InputAutocomplete
                     placeholder="Selecione disciplina"
-                    options={disciplinas}
+                    options={disciplinasUnicas}
                     valueChange={setDisciplina}
                 />
             </div>
@@ -65,7 +91,7 @@ function ModalProcurarProfessor({
                 <span className="pr-5">Área de interesse</span>
                 <InputAutocomplete
                     placeholder="Selecione área de interesse"
-                    options={areasInteresse}
+                    options={areasInteresseUnicas}
                     valueChange={setAreaInteresse}
                 />
             </div>
@@ -100,7 +126,6 @@ function ModalProcurarProfessor({
 export default function BuscarProfessor() {
     const [nomeProfessor, setNomeProfessor] = useState('')
     const [open, setOpen] = useState(false)
-    console.log(open)
     function handleOpen() {
         setOpen(true)
     }

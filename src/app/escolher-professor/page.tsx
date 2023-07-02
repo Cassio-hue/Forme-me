@@ -15,46 +15,34 @@ export default function Page() {
     const disciplina = searchParams.get('disciplina')
     const areaInteresse = searchParams.get('areaInteresse')
 
-    // Filtro dos professores que atendem aos requisitos da busca
-
     useEffect(() => {
+        let filteredProfessores = teachers
+
         if (nomeProfessor) {
-            setProfessores(
-                professores.filter((professor) =>
-                    professor.nome.includes(nomeProfessor)
-                )
+            filteredProfessores = filteredProfessores.filter((professor) =>
+                professor.nome.includes(nomeProfessor)
             )
         } else if (departamento) {
-            setProfessores(
-                professores.filter((professor) =>
-                    professor.departamento.includes(departamento)
-                )
+            filteredProfessores = filteredProfessores.filter((professor) =>
+                professor.departamento.includes(departamento)
             )
-            if (professores.length != 0)
-                setProfessores(
-                    professores.filter((professor) =>
-                        professor.sigla_depto.includes(
-                            departamento.toUpperCase()
-                        )
-                    )
+
+            if (filteredProfessores.length !== 0)
+                filteredProfessores = filteredProfessores.filter((professor) =>
+                    professor.sigla_depto.includes(departamento.toUpperCase())
                 )
         } else if (disciplina) {
-            setProfessores(
-                professores.filter((professor) =>
-                    professor.disciplina.includes(disciplina)
-                )
+            filteredProfessores = filteredProfessores.filter((professor) =>
+                professor.disciplina.includes(disciplina)
             )
         } else if (areaInteresse) {
-            setProfessores(
-                professores.filter((professor) =>
-                    professor.areasInteresse.includes(areaInteresse)
-                )
+            filteredProfessores = filteredProfessores.filter((professor) =>
+                professor.areasInteresse.includes(areaInteresse)
             )
-        } else {
-            setProfessores(teachers)
         }
-    }, [nomeProfessor, departamento, disciplina, areaInteresse, professores])
 
+        setProfessores(filteredProfessores)
+    }, [nomeProfessor, departamento, disciplina, areaInteresse])
     return (
         <div className="p-24 flex flex-wrap gap-5 overflow-y-auto">
             {professores.map((professor, idx) => (
