@@ -14,8 +14,8 @@ import InputAutocomplete from '../components/InputAutocomplete'
 import { ModalDialog } from '../components/Modal'
 
 const departamentos = [
-    { label: 'CIC', id: 1 },
-    { label: 'MAT', id: 2 },
+    { label: 'Ciência da Computação', id: 1 },
+    { label: 'Matemática', id: 2 },
 ]
 
 const disciplinas: { label: string; id: number }[] = teachers.flatMap(

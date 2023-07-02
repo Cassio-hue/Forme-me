@@ -18,28 +18,22 @@ export default function Page() {
     useEffect(() => {
         let filteredProfessores = teachers
 
-        if (nomeProfessor) {
+        if (nomeProfessor)
             filteredProfessores = filteredProfessores.filter((professor) =>
                 professor.nome.includes(nomeProfessor)
             )
-        } else if (departamento) {
+        if (departamento)
             filteredProfessores = filteredProfessores.filter((professor) =>
                 professor.departamento.includes(departamento)
             )
-
-            if (filteredProfessores.length !== 0)
-                filteredProfessores = filteredProfessores.filter((professor) =>
-                    professor.sigla_depto.includes(departamento.toUpperCase())
-                )
-        } else if (disciplina) {
+        if (disciplina)
             filteredProfessores = filteredProfessores.filter((professor) =>
                 professor.disciplina.includes(disciplina)
             )
-        } else if (areaInteresse) {
+        if (areaInteresse)
             filteredProfessores = filteredProfessores.filter((professor) =>
                 professor.areasInteresse.includes(areaInteresse)
             )
-        }
 
         setProfessores(filteredProfessores)
     }, [nomeProfessor, departamento, disciplina, areaInteresse])
