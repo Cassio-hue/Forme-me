@@ -64,7 +64,7 @@ export default function Page() {
                     disciplines={professor.disciplina}
                     area_of_interest={professor.areasInteresse}
                     area_of_ocupation={[' ']}
-                    image={'https://loremflickr.com/640/480'}
+                    image={professor.foto}
                 />
             ))}
         </div>

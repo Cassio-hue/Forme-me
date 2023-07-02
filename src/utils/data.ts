@@ -1,6 +1,7 @@
 export const teachers = [
     {
         id: 0,
+        foto: 'https://cic.unb.br/images/uploads/2016/09/photo_melo-150x150.jpg',
         nome: 'Alba Cristina Magalhaes Alves de Melo',
         areasInteresse: [
             'Biologia Computacional',
@@ -18,6 +19,7 @@ export const teachers = [
     },
     {
         id: 1,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/1566076687226024.jpg',
         nome: 'Aleteia Patricia Favacho de Araujo',
         areasInteresse: ['Computação Paralela', 'Sistemas Distribuídos'],
         link_lattes: 'http://lattes.cnpq.br/1566076687226024',
@@ -28,6 +30,7 @@ export const teachers = [
     },
     {
         id: 2,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/8525132522308309.jpg',
         nome: 'André Costa Drummond',
         areasInteresse: ['Redes de Computadores'],
         link_lattes: 'http://lattes.cnpq.br/8525132522308309',
@@ -38,6 +41,7 @@ export const teachers = [
     },
     {
         id: 3,
+        foto: 'http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4137729J5',
         nome: 'Bruno Macchiavello',
         areasInteresse: ['Processamento Digital de Sinais e Multimídia'],
         link_lattes: 'http://lattes.cnpq.br/5850453918340560',
@@ -51,6 +55,7 @@ export const teachers = [
     },
     {
         id: 4,
+        foto: 'https://www.cic.unb.br/images/uploads/2016/05/camilo_LISA-150x150.jpg',
         nome: 'Camilo Chang Dórea',
         areasInteresse: ['Processamento Digital de Sinais e Multimídia'],
         link_lattes: 'http://lattes.cnpq.br/7370796774582075',
@@ -61,6 +66,7 @@ export const teachers = [
     },
     {
         id: 5,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/4356412661621236.jpg',
         nome: 'Carla Cavalcante Koike',
         areasInteresse: ['Hardware', 'Robótica'],
         link_lattes: 'http://lattes.cnpq.br/4356412661621236',
@@ -74,6 +80,7 @@ export const teachers = [
     },
     {
         id: 6,
+        foto: 'https://www.cic.unb.br/images/uploads/2016/05/foto_Carla_Castanho-150x150.jpg',
         nome: 'Carla Denise Castanho',
         areasInteresse: ['Jogos de Computador'],
         link_lattes: 'http://lattes.cnpq.br/2003154270448435',
@@ -87,6 +94,7 @@ export const teachers = [
     },
     {
         id: 7,
+        foto: 'https://nalon.org/images/2015-02-13-birthday.jpg',
         nome: 'Cláudia Nalon',
         areasInteresse: [
             'Lógica',
@@ -102,6 +110,7 @@ export const teachers = [
     },
     {
         id: 8,
+        foto: 'https://nalon.org/images/2015-02-13-birthday.jpg',
         nome: 'Cláudia Nalon',
         areasInteresse: [
             'Lógica',
@@ -117,6 +126,7 @@ export const teachers = [
     },
     {
         id: 9,
+        foto: 'https://www.cic.unb.br/images/uploads/2016/05/aleteia-150x150.jpg',
         nome: 'Daniel de Paula Porto',
         areasInteresse: ['Engenharia de Software', 'Gerência de Projetos'],
         link_lattes: 'http://lattes.cnpq.br/4163096024457599eng',
@@ -127,6 +137,7 @@ export const teachers = [
     },
     {
         id: 10,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/1808368824068028.jpg',
         nome: 'Dibio Leandro Borges',
         areasInteresse: [
             'Inteligência Artificial',
@@ -141,6 +152,7 @@ export const teachers = [
     },
     {
         id: 11,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/0765775965717248.jpg',
         nome: 'Edison Ishikawa',
         areasInteresse: [
             'Sistemas Distribuídos',
@@ -155,6 +167,7 @@ export const teachers = [
     },
     {
         id: 12,
+        foto: 'https://www.cic.unb.br/images/uploads/2017/12/IMG_9840-150x150.jpg',
         nome: 'Edna Dias Canedo',
         areasInteresse: [
             'Engenharia de Software',
@@ -170,6 +183,7 @@ export const teachers = [
     },
     {
         id: 13,
+        foto: 'https://www.cic.unb.br/images/uploads/2016/03/alchieri-150x150.jpg',
         nome: 'Eduardo Adilo Pelinson Alchieri',
         areasInteresse: ['Sistemas Distribuídos', 'Tolerância a Falhas'],
         link_lattes: 'http://lattes.cnpq.br/4885132018861296',
@@ -180,6 +194,7 @@ export const teachers = [
     },
     {
         id: 14,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/5881553604748585.jpg',
         nome: 'Fernanda Lima',
         areasInteresse: [
             'Engenharia de Software',
@@ -197,6 +212,7 @@ export const teachers = [
     },
     {
         id: 15,
+        foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMrL8nBduZhHIOPMJQ-uG9I50PF-ZXrmKhahSa7zlOwj383FEHetj1JqvzCIWPAMMWhY&usqp=CAU',
         nome: 'Fernando Albuquerque',
         areasInteresse: ['Engenharia de Software'],
         link_lattes: 'http://lattes.cnpq.br/0766291598953512',
@@ -207,6 +223,7 @@ export const teachers = [
     },
     {
         id: 16,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/0453892715674953.jpg',
         nome: 'Flavio Barros Vidal',
         areasInteresse: [
             'Inteligência Artificial',
@@ -225,6 +242,7 @@ export const teachers = [
     },
     {
         id: 17,
+        foto: 'https://www.cic.unb.br/images/uploads/2016/05/flavio2-150x150.jpg',
         nome: 'Flavio Leonardo Cavalcanti Moura',
         areasInteresse: ['Métodos Formais', 'Lógica', 'Teoria da Computação'],
         link_lattes: 'http://lattes.cnpq.br/4924037693113808',
@@ -235,6 +253,7 @@ export const teachers = [
     },
     {
         id: 18,
+        foto: 'http://www.pesquisar.unb.br/img/fotos/2966913210268454.jpg',
         nome: 'Genaina Nunes Rodrigues',
         areasInteresse: [
             'Engenharia de Software',
