@@ -1,20 +1,26 @@
+import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button'
 import { Button } from '@mui/material'
 import clsx from 'clsx'
 
-type ButtonProps = {
-    children: any
-    onClick?: Function
-    disabled?: boolean
-}
-
-export const FormButton = ({ children, onClick, disabled }: any) => {
+export const FormButton = ({
+    children,
+    onClick,
+    disabled,
+    type,
+}: MuiButtonProps) => {
     return (
         <Button
+            type={type}
             disabled={disabled}
             onClick={onClick}
             className={clsx(
-                'bg-azul hover:bg-azul hover:backdrop: text-white rounded-lg normal-case p-3 shadow-lg shadow-slate-600 mt-3 w-full'
+                'rounded-lg p-3 shadow-lg shadow-slate-600 mt-3 w-full'
             )}
+            style={{
+                backgroundColor: '#004080',
+                color: '#FFF',
+                textTransform: 'none',
+            }}
         >
             {children}
         </Button>

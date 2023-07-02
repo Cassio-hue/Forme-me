@@ -71,7 +71,7 @@ function ModalProcurarProfessor({
             </div>
             <Link
                 href={{
-                    pathname: '/escolha-professor',
+                    pathname: '/escolher-professor',
                     query: {
                         nomeProfessor: nomeProfessor,
                         departamento: departamento,

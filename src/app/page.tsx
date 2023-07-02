@@ -2,13 +2,14 @@
 
 import FormemeLogo from '@/../public/login_logo.svg'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 import { FormButton } from './components/Button'
 import { Input } from './components/Input'
 
 export default function LoginPage() {
+    const router = useRouter()
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
     const [errorConfirm, setErrorConfirm] = useState(false)
@@ -33,6 +34,15 @@ export default function LoginPage() {
         if (isEmail) setEmail(value)
     }
 
+    function handleSubmit(event: React.FormEvent) {
+        console.log('EVENTO:', event)
+
+        event.preventDefault()
+
+        console.log(errorEmail, errorPassword)
+        if (!errorEmail && !errorPassword) router.push('buscar-professor')
+    }
+
     return (
         <div className="flex relative justify-center items-center h-full">
             <div className="flex flex-col h-full justify-center items-center pb-16">
@@ -43,7 +53,7 @@ export default function LoginPage() {
                     width={200}
                 />
                 <div className="grid grid-col-1 items-center">
-                    <div className="flex gap-12">
+                    <form onSubmit={handleSubmit} className="flex gap-12">
                         <Input
                             label="E-mail"
                             required
@@ -77,12 +87,10 @@ export default function LoginPage() {
                                     Esqueci a senha
                                 </span>
 
-                                <Link href={'/buscar-professor'}>
-                                    <FormButton>Entrar</FormButton>
-                                </Link>
+                                <FormButton type="submit">Entrar</FormButton>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
