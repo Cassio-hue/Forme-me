@@ -1,4 +1,4 @@
-export var teachers = [
+export const teachers = [
     {
         id: 0,
         nome: 'Alba Cristina Magalhaes Alves de Melo',
@@ -11,6 +11,10 @@ export var teachers = [
         email: 'alves@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: [
+            'Introdução à Computação',
+            'Introdução à Programação de Computadores',
+        ],
     },
     {
         id: 1,
@@ -18,8 +22,9 @@ export var teachers = [
         areasInteresse: ['Computação Paralela', 'Sistemas Distribuídos'],
         link_lattes: 'http://lattes.cnpq.br/1566076687226024',
         email: 'aleteia@unb.br',
-        departamento: 'Ciência da Computação',
-        sigla_depto: 'CIC',
+        departamento: 'Matemática',
+        sigla_depto: 'MAT',
+        disciplina: ['Introdução à Cloud Computing', 'Sistemas Operacionais'],
     },
     {
         id: 2,
@@ -29,6 +34,7 @@ export var teachers = [
         email: 'andred@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Redes de Computadores', 'Redes de Computadores II'],
     },
     {
         id: 3,
@@ -38,6 +44,10 @@ export var teachers = [
         email: 'macchiavello@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: [
+            'Processamento Digital de Sinais',
+            'Processamento Digital de Sinais II',
+        ],
     },
     {
         id: 4,
@@ -47,6 +57,7 @@ export var teachers = [
         email: 'camilodorea@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Processamento de Sinais', 'Processamento de Sinais II'],
     },
     {
         id: 5,
@@ -56,6 +67,10 @@ export var teachers = [
         email: 'ckoike@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: [
+            'Arquitetura de Computadores',
+            'Arquitetura de Computadores II',
+        ],
     },
     {
         id: 6,
@@ -65,6 +80,10 @@ export var teachers = [
         email: 'carlacastanho@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: [
+            'Introdução à Computação',
+            'Introdução à Programação de Computadores',
+        ],
     },
     {
         id: 7,
@@ -79,6 +98,7 @@ export var teachers = [
         email: 'nalon@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Lógica para Computação', 'Lógica para Computação II'],
     },
     {
         id: 8,
@@ -93,6 +113,7 @@ export var teachers = [
         email: 'nalon@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Lógica para Computação', 'Matemática Discreta'],
     },
     {
         id: 9,
@@ -102,6 +123,7 @@ export var teachers = [
         email: 'daniel.porto@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Engenharia de Software', 'Projeto de Software'],
     },
     {
         id: 10,
@@ -115,6 +137,7 @@ export var teachers = [
         email: 'dibio@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Inteligência Artificial', 'Inteligência Artificial II'],
     },
     {
         id: 11,
@@ -128,6 +151,7 @@ export var teachers = [
         email: 'ishikawa@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Estrutura de Dados', 'Tópicos Avançados em Computação'],
     },
     {
         id: 12,
@@ -142,6 +166,7 @@ export var teachers = [
         email: 'ednacanedo@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Banco de Dados', 'Banco de Dados II'],
     },
     {
         id: 13,
@@ -151,6 +176,7 @@ export var teachers = [
         email: 'ealchieri@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Sistemas Distribuídos', 'Sistemas Distribuídos II'],
     },
     {
         id: 14,
@@ -167,6 +193,7 @@ export var teachers = [
         email: 'ferlima@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Interação Humano Computador', 'Sistemas de Informação'],
     },
     {
         id: 15,
@@ -176,6 +203,7 @@ export var teachers = [
         email: 'nando@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Técnicas de Programação', 'Engeharia de Software'],
     },
     {
         id: 16,
@@ -190,6 +218,10 @@ export var teachers = [
         email: 'fbvidal@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: [
+            'Organização e Arquitetura de Computadores',
+            'Arquitetura de Computadores',
+        ],
     },
     {
         id: 17,
@@ -199,6 +231,7 @@ export var teachers = [
         email: 'flaviomoura@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
+        disciplina: ['Lógica Computacional', 'Projeto e Análise de Algoritmos'],
     },
     {
         id: 18,
@@ -213,18 +246,6 @@ export var teachers = [
         email: 'genaina@unb.br',
         departamento: 'Ciência da Computação',
         sigla_depto: 'CIC',
-    },
-    {
-        id: 19,
-        nome: 'Genaina Nunes Rodrigues',
-        areasInteresse: [
-            'Inteligência Artificial',
-            'Computação Colaborativa e Social',
-            'Informática na Educação',
-        ],
-        link_lattes: 'http://lattes.cnpq.br/2899317637335635',
-        email: 'genaina@unb.br',
-        departamento: 'Ciência da Computação',
-        sigla_depto: 'CIC',
+        disciplina: ['Engenharia de Software', 'Engenharia de Software II'],
     },
 ]
