@@ -3,9 +3,8 @@
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-import { CardProfessor } from '../components/CardProfessor'
-import { CardTrabalho } from '../components/CardTrabalho'
 import { teachers } from '../../utils/data'
+import { CardProfessor } from '../components/CardProfessor'
 
 export default function Page() {
     const [professores, setProfessores] = useState(teachers)
@@ -31,7 +30,7 @@ export default function Page() {
                     professor.departamento.includes(departamento)
                 )
             )
-            if (professores.length != 0) {
+            if (professores.length != 0)
                 setProfessores(
                     professores.filter((professor) =>
                         professor.sigla_depto.includes(
@@ -39,7 +38,6 @@ export default function Page() {
                         )
                     )
                 )
-            }
         } else if (disciplina) {
             setProfessores(
                 professores.filter((professor) =>
@@ -55,12 +53,13 @@ export default function Page() {
         } else {
             setProfessores(teachers)
         }
-    }, [nomeProfessor, departamento, disciplina, areaInteresse])
+    }, [nomeProfessor, departamento, disciplina, areaInteresse, professores])
 
     return (
         <div className="flex flex-wrap gap-5 overflow-y-auto">
-            {professores.map((professor) => (
+            {professores.map((professor, idx) => (
                 <CardProfessor
+                    key={idx}
                     name={professor.nome}
                     disciplines={professor.disciplina}
                     area_of_interest={professor.areasInteresse}
