@@ -1,6 +1,5 @@
 import { Button } from '@mui/material'
 import clsx from 'clsx'
-import { type } from 'os'
 
 type ButtonProps = {
     children: any
