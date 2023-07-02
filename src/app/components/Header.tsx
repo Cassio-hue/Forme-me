@@ -15,14 +15,16 @@ export function Header() {
                 'flex justify-between bg-azul text-white h-16 items-center px-8'
             )}
         >
-            <Image src={FormeMeLogo} alt="logo" />
+            <Link href="/">
+                <Image src={FormeMeLogo} alt="logo" />
+            </Link>
             <nav className="w-1/3">
                 <ul className="flex justify-between items-center">
                     <li>
-                        <Link href="/">Buscar Professor</Link>
+                        <Link href="/buscar-professor">Buscar Professor</Link>
                     </li>
                     <li>
-                        <Link href="/busca-projeto">Buscar Projetos</Link>
+                        <Link href="/buscar-projeto">Buscar Projetos</Link>
                     </li>
                     <Link href="/suporte">
                         <Image
