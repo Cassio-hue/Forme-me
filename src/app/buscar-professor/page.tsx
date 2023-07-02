@@ -4,7 +4,7 @@ import FormemeLogo from '@/../public/login_logo.svg'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useContext, useEffect, useState } from 'react'
+import { useState } from 'react'
 import * as React from 'react'
 
 import { FormButton } from '../components/Button'
@@ -12,7 +12,11 @@ import { Input } from '../components/Input'
 import InputAutocomplete from '../components/InputAutocomplete'
 import { ModalDialog } from '../components/Modal'
 
-const departamentos = [{ label: 'Departamento', id: 1 }, { label: 'CIC', id: 2 }, { label: 'MAT', id: 3 }]
+const departamentos = [
+    { label: 'Departamento', id: 1 },
+    { label: 'CIC', id: 2 },
+    { label: 'MAT', id: 3 },
+]
 const disciplinas = [{ label: 'Disciplina', id: 1 }]
 const areasInteresse = [{ label: 'Área de interesse', id: 1 }]
 

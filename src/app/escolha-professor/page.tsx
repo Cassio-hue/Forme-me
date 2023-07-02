@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 import { CardProfessor } from '../components/CardProfessor'
 import { CardTrabalho } from '../components/CardTrabalho'
-import { teachers } from '../components/data'
+import { teachers } from '../../utils/data'
 
 export default function Page() {
     const [professores, setProfessores] = useState(teachers)

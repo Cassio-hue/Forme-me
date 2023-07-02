@@ -48,11 +48,11 @@ export function CardProfessor({
                         </div>
                         <div className="pt-2 text-sm">
                             <p className="mb-5 font-basic">
-                                <b>Disciplinas ministradas:{' '}</b>
+                                <b>Disciplinas ministradas: </b>
                                 {disciplines.join(', ')}.
                             </p>
                             <p className="mb-5 font-basic">
-                                <b>Áreas de interesse:{' '}</b>
+                                <b>Áreas de interesse: </b>
                                 {area_of_interest.join(', ')}.
                             </p>
                         </div>

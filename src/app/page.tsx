@@ -2,6 +2,7 @@
 
 import FormemeLogo from '@/../public/login_logo.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 import { FormButton } from './components/Button'
@@ -76,7 +77,9 @@ export default function LoginPage() {
                                     Esqueci a senha
                                 </span>
 
-                                <FormButton>Entrar</FormButton>
+                                <Link href={'/buscar-professor'}>
+                                    <FormButton>Entrar</FormButton>
+                                </Link>
                             </div>
                         </div>
                     </div>
