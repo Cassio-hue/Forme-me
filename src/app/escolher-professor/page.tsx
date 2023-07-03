@@ -20,7 +20,9 @@ export default function Page() {
 
         if (nomeProfessor)
             filteredProfessores = filteredProfessores.filter((professor) =>
-                professor.nome.includes(nomeProfessor)
+                professor.nome
+                    .toLowerCase()
+                    .includes(nomeProfessor.toLowerCase())
             )
         if (departamento)
             filteredProfessores = filteredProfessores.filter((professor) =>
