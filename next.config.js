@@ -8,7 +8,8 @@ const nextConfig = {
           'www.cic.unb.br',
           'servicosweb.cnpq.br',
           'nalon.org',
-          'encrypted-tbn0.gstatic.com'
+          'encrypted-tbn0.gstatic.com',
+          'mat.unb.br'
         ],
 
       },
