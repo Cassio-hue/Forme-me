@@ -49,6 +49,7 @@ export default function Page() {
                     area_of_interest={professor.areasInteresse}
                     area_of_ocupation={[' ']}
                     image={professor.foto}
+                    curriculumLink={professor.link_lattes}
                 />
             ))}
         </div>
