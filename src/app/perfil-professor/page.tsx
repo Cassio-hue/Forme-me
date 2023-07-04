@@ -21,10 +21,13 @@ export default function BuscarProfessor() {
             <p className="text-5xl"> Nome do Professor</p>
 
             <div className="flex">
-                    <div className= "mr-2"><p>aaaa</p></div>
-                    <div><p>bbbbbbbbbb</p></div>
+                <div className="mr-2">
+                    <p>aaaa</p>
+                </div>
+                <div>
+                    <p>bbbbbbbbbb</p>
+                </div>
             </div>
         </div>
     )
-
 }
